@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: burlywood;
+}
+
+#title {
+    box-sizing: border-box;
+    background-color: rgb(160, 213, 235);
+    height: 17rem;
+    width: 100%;
+    text-align: center;
+    border: 6px solid black;
+}
+
+#title p{
+    box-sizing: content-box;
+    font-size: 5rem;
+    padding: 6rem 0 6rem 0;
+    text-decoration: underline overline black;
+}
+
+#bookShelves {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: auto;
+    height: auto;
+}
+
+.bookShelve {
+    background-color: rgb(207, 223, 223);
+    margin: 2rem;
+    height: 26rem;
+    width: 20rem;
+    box-shadow: rgba(0, 0, 0, 0.63) 0px 3px 8px;
+    border-radius: 5%;
+}
+
+.bookShelve ul {
+    padding: 1rem 2rem;
+}
+
+.bookShelve ul li input{
+    width: 100%;
+    height: 2rem;
+}
+
+#addBook:hover {
+    transform: scale(1.01);
+}
+
+#addBook {
+    display: grid;
+    align-content: center;
+    margin: .8rem;
+    height: 20rem;
+    width: 20rem;
+    font-size: 10rem;
+    border-radius: 50%;
+    border-color: blue;
+    transition-duration: .3s; 
+    box-shadow: rgba(0, 0, 0, 0.63) 0px 3px 8px;
+}
+
+#addBook:hover #plus{
+    transform: rotate(180deg) scale(1);
+    color: rgb(99, 155, 133);
+}
+
+#addBook #plus {
+    transition-duration: 1s;
+    justify-self: center;
+    align-self: center;
+}
+
+
+/*https://www.w3schools.com/howto/howto_css_switch.asp*/
+
+ /* The switch - the box around the slider */
+ .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #91288b;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #7d3b80;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  } 
